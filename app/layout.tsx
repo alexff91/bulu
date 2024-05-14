@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://yourwebsite.com/",
-    site_name: "BULU",
+    url: "https://bulu-tangkis.id/",
+    siteName: "BULU",
     title: "BULU - Aplikasi Pecinta Bulu Tangkis",
     description: "Tingkatkan kemampuan bermain bulu tangkismu, bagikan momen terbaik bermain dengan teman-teman, kirim video permainanmu untuk direview oleh pelatih berpengalaman.",
     images: [
       {
-        url: "https://yourwebsite.com/images/logo.png",
+        url: "https://bulu-tangkis.id/images/logo.png",
         width: 800,
         height: 600,
         alt: "BULU Logo",
@@ -42,7 +42,7 @@ export default function RootLayout({
         <meta property="og:type" content={metadata.openGraph?.type} />
         <meta property="og:locale" content={metadata.openGraph?.locale} />
         <meta property="og:url" content={metadata.openGraph?.url} />
-        <meta property="og:site_name" content={metadata.openGraph?.site_name} />
+        <meta property="og:site_name" content={metadata.openGraph?.siteName} />
         <meta property="og:title" content={metadata.openGraph?.title} />
         <meta property="og:description" content={metadata.openGraph?.description} />
         {metadata.openGraph?.images?.map((image, index) => (
