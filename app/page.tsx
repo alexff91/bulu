@@ -7,7 +7,7 @@ export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#131945] py-12 px-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#131945] py-12 px-4 font-inter">
       <div
         className={`transform transition-transform duration-500 ${
           isHovered ? "rotate-180 scale-110" : ""
