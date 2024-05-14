@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Key } from "react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    handle: "@yourhandle",
+    creator: "@yourhandle",
     site: "@site",
     cardType: "summary_large_image",
   },
@@ -45,12 +46,12 @@ export default function RootLayout({
         <meta property="og:site_name" content={metadata.openGraph?.siteName} />
         <meta property="og:title" content={metadata.openGraph?.title} />
         <meta property="og:description" content={metadata.openGraph?.description} />
-        {metadata.openGraph?.images?.map((image, index) => (
+        {metadata.openGraph?.images?.map((image: { url: string | undefined; }, index: Key | null | undefined) => (
           <meta key={index} property="og:image" content={image.url} />
         ))}
         <meta name="twitter:card" content={metadata.twitter?.cardType} />
         <meta name="twitter:site" content={metadata.twitter?.site} />
-        <meta name="twitter:creator" content={metadata.twitter?.handle} />
+        <meta name="twitter:creator" content={metadata.twitter?.creator} />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
