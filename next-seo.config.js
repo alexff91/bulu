@@ -4,7 +4,7 @@ export default {
     openGraph: {
       type: 'website',
       locale: 'id_ID', // Change to your preferred locale
-      url: 'https://yourwebsite.com/', // Change to your website URL
+      url: 'https://bulu-tangkis.id/', // Change to your website URL
       site_name: 'BULU',
     },
     twitter: {
