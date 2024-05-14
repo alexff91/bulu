@@ -12,10 +12,11 @@
     "@builder.io/dev-tools": "^1.0.10",
     "@builder.io/react": "^3.2.6",
     "@builder.io/sdk": "^2.2.2",
+    "@fontsource/inter": "^4.5.15",
+    "@fontsource/poetsen-one": "^5.0.1",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18",
-    "@fontsource/inter": "^4.5.15"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",

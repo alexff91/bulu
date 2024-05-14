@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("@fontsource/poetsen-one"); /* Import the PoetsenOne font */
 
 @import "@fontsource/inter/variable.css";
 
@@ -37,4 +38,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.poetsen-one {
+  font-family: 'Poetsen One', sans-serif;
 }
