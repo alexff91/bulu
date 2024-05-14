@@ -38,19 +38,16 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <meta name="description" content={metadata.description} />
-        <meta property="og:type" content={metadata.openGraph?.type} />
-        <meta property="og:locale" content={metadata.openGraph?.locale} />
-        <meta property="og:url" content={metadata.openGraph?.url} />
-        <meta property="og:site_name" content={metadata.openGraph?.siteName} />
-        <meta property="og:title" content={metadata.openGraph?.title} />
-        <meta property="og:description" content={metadata.openGraph?.description} />
-        {metadata.openGraph?.images?.map((image: { url: string }, index: number) => (
-          <meta key={index} property="og:image" content={image.url} />
-        ))}
-        <meta name="twitter:card" content={metadata.twitter?.card} />
-        <meta name="twitter:site" content={metadata.twitter?.site} />
-        <meta name="twitter:creator" content={metadata.twitter?.creator} />
+        <meta name="description" content={metadata.description ?? ""} />
+        <meta property="og:type" content={metadata.openGraph?.type ?? ""} />
+        <meta property="og:locale" content={metadata.openGraph?.locale ?? ""} />
+        <meta property="og:url" content={metadata.openGraph?.url ?? ""} />
+        <meta property="og:site_name" content={metadata.openGraph?.siteName ?? ""} />
+        <meta property="og:title" content={metadata.openGraph?.title ?? ""} />
+        <meta property="og:description" content={metadata.openGraph?.description ?? ""} />
+        <meta name="twitter:card" content={metadata.twitter?.card ?? ""} />
+        <meta name="twitter:site" content={metadata.twitter?.site ?? ""} />
+        <meta name="twitter:creator" content={metadata.twitter?.creator ?? ""} />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
