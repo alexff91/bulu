@@ -38,16 +38,12 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <meta name="description" content={metadata.description ?? ""} />
-        <meta property="og:type" content={metadata.openGraph?.type ?? ""} />
-        <meta property="og:locale" content={metadata.openGraph?.locale ?? ""} />
-        <meta property="og:url" content={metadata.openGraph?.url ?? ""} />
-        <meta property="og:site_name" content={metadata.openGraph?.siteName ?? ""} />
-        <meta property="og:title" content={metadata.openGraph?.title ?? ""} />
-        <meta property="og:description" content={metadata.openGraph?.description ?? ""} />
-        <meta name="twitter:card" content={metadata.twitter?.card ?? ""} />
-        <meta name="twitter:site" content={metadata.twitter?.site ?? ""} />
-        <meta name="twitter:creator" content={metadata.twitter?.creator ?? ""} />
+        <meta name="description" content={String(metadata.description ?? "")} />
+        <meta property="og:locale" content={String(metadata.openGraph?.locale ?? "")} />
+        <meta property="og:url" content={String(metadata.openGraph?.url ?? "")} />
+        <meta property="og:site_name" content={String(metadata.openGraph?.siteName ?? "")} />
+        <meta property="og:title" content={String(metadata.openGraph?.title ?? "")} />
+        <meta property="og:description" content={String(metadata.openGraph?.description ?? "")} />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
