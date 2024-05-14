@@ -15,9 +15,10 @@ export default function Home() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <img
+        <Image
           loading="lazy"
           srcSet="/logo.svg 100w, /logo.svg 200w, /logo.svg 400w, /logo.svg 800w, /logo.svg 1200w, /logo.svg 1600w, /logo.svg 2000w"
+          alt="Bulu Logo"
           className="aspect-square w-[100px] max-md:w-[50px] mb-4"
         />
       </div>
@@ -47,9 +48,10 @@ export default function Home() {
           rel="noopener noreferrer"
           className="transition-transform duration-300 transform hover:scale-110"
         >
-          <img
+          <Image
             loading="lazy"
             srcSet="/apple.svg 100w, /apple.svg 200w, /apple.svg 400w, /apple.svg 800w, /apple.svg 1200w, /apple.svg 1600w, /apple.svg 2000w"
+            alt="Download on the Apple Store"
             className="w-[50px] aspect-square"
           />
         </a>
@@ -59,9 +61,10 @@ export default function Home() {
           rel="noopener noreferrer"
           className="transition-transform duration-300 transform hover:scale-110"
         >
-          <img
+          <Image
             loading="lazy"
             srcSet="/android.svg 100w, /android.svg 200w, /android.svg 400w, /android.svg 800w, /android.svg 1200w, /android.svg 1600w, /android.svg 2000w"
+            alt="Get it on Google Play"
             className="w-[50px] aspect-square"
           />
         </a>
