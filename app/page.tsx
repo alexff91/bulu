@@ -1,4 +1,4 @@
-"use client"; // This must be the first line in the file
+"use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -18,7 +18,7 @@ export default function Home() {
         <Image
           loading="lazy"
           srcSet="/logo.svg 100w, /logo.svg 200w, /logo.svg 400w, /logo.svg 800w, /logo.svg 1200w, /logo.svg 1600w, /logo.svg 2000w"
-          alt="Bulu Logo"
+          alt="BULU Logo"
           className="aspect-square w-[100px] max-md:w-[50px] mb-4"
         />
       </div>
