@@ -4,29 +4,33 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
+const TITLE = 'BULU — badminton and padel in Bali';
+const DESCRIPTION =
+  'Where to play badminton and padel in Bali: courts in Denpasar, Sanur, Canggu, Seminyak and Kerobokan, what to bring, and how the scoring works.';
+
 export const metadata = {
-  title: 'BULU - Aplikasi Pecinta Bulu Tangkis',
-  description: 'Tingkatkan kemampuan bermain bulu tangkismu, bagikan momen terbaik bermain dengan teman-teman, kirim video permainanmu untuk direview oleh pelatih berpengalaman.',
+  title: TITLE,
+  description: DESCRIPTION,
   openGraph: {
-    title: 'BULU - Aplikasi Pecinta Bulu Tangkis',
-    description: 'Tingkatkan kemampuan bermain bulu tangkismu, bagikan momen terbaik bermain dengan teman-teman, kirim video permainanmu untuk direview oleh pelatih berpengalaman.',
+    title: TITLE,
+    description: DESCRIPTION,
     url: 'https://bulu-tangkis.id/',
     siteName: 'BULU',
+    // The logo doubles as the share image. The previous entry pointed at an
+    // og-image.png that was never added, so every shared link showed a blank card.
     images: [
       {
-        url: 'https://bulu-tangkis.id/og-image.png',
-        width: 800,
-        height: 600,
+        url: 'https://bulu-tangkis.id/logo.svg',
         alt: 'BULU',
       },
     ],
-    locale: 'id_ID',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@site',
-    creator: '@yourhandle',
+    card: 'summary',
+    title: TITLE,
+    description: DESCRIPTION,
   },
 };
 
@@ -35,19 +39,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // lang is English because the page is now written in it. The head tags that
+  // used to be hand-written here are dropped: the metadata export above already
+  // emits them, and keeping both meant editing every title twice.
   return (
-    <html lang="id">
-      <head>
-        <meta name="description" content={metadata.description} />
-        <meta property="og:locale" content={metadata.openGraph?.locale ?? ""} />
-        <meta property="og:url" content={metadata.openGraph?.url ?? ""} />
-        <meta property="og:site_name" content={metadata.openGraph?.siteName ?? ""} />
-        <meta property="og:title" content={metadata.openGraph?.title ?? ""} />
-        <meta property="og:description" content={metadata.openGraph?.description ?? ""} />
-        <meta name="twitter:card" content={metadata.twitter?.card ?? ""} />
-        <meta name="twitter:site" content={metadata.twitter?.site ?? ""} />
-        <meta name="twitter:creator" content={metadata.twitter?.creator ?? ""} />
-      </head>
+    <html lang="en">
       <body className={inter.className}>
         {children}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C1RDTTH5M2" />
