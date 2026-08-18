@@ -82,13 +82,17 @@ export default function Home() {
           className="pointer-events-none absolute left-1/2 top-[-14rem] h-[26rem] w-[46rem] -translate-x-1/2 rounded-full bg-teal-500/20 blur-3xl"
         />
         <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-5 pb-14 pt-14 text-center sm:pt-20">
+          {/* A 144px JPEG rather than the old logo.svg, which was a
+              1024x1024 raster wrapped in SVG - 220 kB for something drawn at
+              72 px, and 57% of the page's weight. It was the last thing to
+              finish loading on a phone. */}
           <Image
-            src="/logo.svg"
+            src="/logo.jpg"
             alt=""
             width={72}
             height={72}
             priority
-            className="mb-5 aspect-square"
+            className="mb-5 aspect-square rounded-2xl"
           />
           <p className="poetsen-one mb-4 text-2xl tracking-wide text-white">BULU</p>
 

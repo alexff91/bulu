@@ -20,7 +20,7 @@ export const metadata = {
     // og-image.png that was never added, so every shared link showed a blank card.
     images: [
       {
-        url: 'https://bulu-tangkis.id/logo.svg',
+        url: 'https://bulu-tangkis.id/logo.jpg',
         alt: 'BULU',
       },
     ],
