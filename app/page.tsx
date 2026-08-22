@@ -30,11 +30,13 @@ function VenueCard({ venue }: { venue: Venue }) {
         {venue.hours && <span>{venue.hours}</span>}
       </div>
 
+      {/* The one thing on the card that gets tapped, so on a phone it is a
+          44px target rather than a 20px line of text. */}
       <Link
         href={venue.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 self-start text-sm font-semibold text-teal-400 transition hover:text-teal-300"
+        className="inline-flex min-h-11 items-center gap-1.5 self-start py-2 text-sm font-semibold text-teal-400 transition hover:text-teal-300 sm:min-h-0 sm:py-0"
       >
         {venue.linkLabel}
         <span aria-hidden="true">→</span>
