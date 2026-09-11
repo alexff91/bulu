@@ -1,5 +1,4 @@
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -46,19 +45,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C1RDTTH5M2" />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-C1RDTTH5M2');
-            `,
-          }}
-        />
+        {/* Google Analytics used to load here. It was the only tracker on any
+            of the thirty tools, while the index page promises "no analytics
+            beyond one hit". Visits are counted from the server log like
+            everywhere else. */}
       </body>
     </html>
   );
